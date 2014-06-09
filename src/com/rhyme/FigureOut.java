@@ -9,11 +9,10 @@ import java.util.ArrayList;
 
 public class FigureOut {
 	private ArrayList<String> wordsThatRhyme = new ArrayList<String>();
-	public FigureOut(){
-		
-	}
 	public boolean doTheTwoRhyme(String firstWord,String secondWord){
-		return(firstWord.substring(firstWord.length()-3).equalsIgnoreCase(secondWord.substring(secondWord.length()-3)));
+		String lastThreeLettersFirst = firstWord.substring(firstWord.length()-3);
+		String lastThreeLettersSecond = secondWord.substring(secondWord.length()-3);
+		return((lastThreeLetters).equalsIgnoreCase(lastThreeLettersSecond));
 	}
 	public ArrayList<String> getRhymes(String word){
 		File file = new File("res/enable1.txt");
